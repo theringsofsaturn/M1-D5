@@ -133,20 +133,13 @@ const splitMe  = function(stringsToSplit, separator) {
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
-let boolValue = 2 < 1
-
-const deleteOne = function(string, boolean){
-    // if bool is true return string without the first letter
-    if (boolValue === true) {        
-        string = string.substring(1);
-        
-        return string
-    }else {
-        // remove the last letter from string
-        string = string.substring(0, string.length - 1);
-        
-        return string
-    }
+function deleteOne(str, first){
+  if (first){
+      return str.substring(1)
+  }
+  else{
+      return str.substring(0, str.length - 1)
+  }
 }
 
  console.log(deleteOne("strive", boolValue));
