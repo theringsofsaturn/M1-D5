@@ -83,7 +83,7 @@ console.log(me);
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
 
-delete me.skills[4];
+me.skills.pop()
 
 console.log(me);
 
@@ -217,23 +217,31 @@ console.log('The current day of the week is ' + weekDay);
         values: [3, 3, 4]
     }
 */
-// let values
-// let sum
 
-// const rollTheDices = function(int){
-    // invoke dice() x times
+const rollTheDices = function (number) {
+  let values = []; 
+  for (let i = 0; i < number; i++) {
+    
+    values.push(dice(1, 6)); 
+  }
+  return values; 
+};
+let amountOfTimes = 3; 
+let tot = rollTheDices(amountOfTimes); 
 
-    // return an object containing the single values of the dicerolls
-    // return  array containing single values
-//}
+let _sum = tot.reduce(function (x, y) {
+  
+  return x + y;
+});
 
+console.log(tot);
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
 function howManyDays(date) {
-    var present = new Date(date.getTime());
-    var past = new Date(date.getFullYear(), 0, 1);
+    let present = new Date(date.getTime());
+    let past = new Date(date.getFullYear(), 0, 1);
   
     return Math.ceil((present - past + 1) / 86400000);
   }
@@ -272,16 +280,6 @@ console.log(isTodayMyBirthday())
 /* Ex.11
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
-let obj = {string}
-const deleteProp = function(obj, string){
-    // if obj.string is equal to string delete obj.string 
-    if (obj.string === string){
-        delete obj.string
-        return obj
-    }
-}
-
-console.log(deleteProp())
 
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
