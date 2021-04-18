@@ -99,12 +99,14 @@ function dice() {
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
 
-const whoIsBigger = function(n1, n2){
-    let biggestNumber = Math.max(n1, n2); // Math.max function returns the largest of the zero or more numbers given as input parameters
-    return biggestNumber; // return the largest number of the values n1 and n2
+function whoIsBigger(n1, n2) {
+  if (n1 > n2)
+      return n1
+  else 
+      return n2
+  
+  // return n1 > n2 ? n1 : n2
 }
-
-console.log(whoIsBigger(4, 10));
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
