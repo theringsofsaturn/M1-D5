@@ -149,14 +149,15 @@ function deleteOne(str, first){
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
-const onlyLetters =  function(string){
-    // remove all the digits
-    let removeNonStrings = string.replace(/[0-9]/g, ''); // using prototype.string.replace
-    return removeNonStrings
-}
+function onlyLetters(str) {
+  let result = ""
+  for(let i = 0; i < str.length; i ++){
+      let currentLetter = str[i]
+      if (isNaN(currentLetter))
+          result += currentLetter
+  }
 
-console.log(onlyLetters("Strive is number 1!"));
-
+  return result
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
