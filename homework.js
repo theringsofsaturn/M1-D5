@@ -392,6 +392,16 @@ function removeIndex(number){
   ***
 */
 
+function halfTree(height) {
+  for (let i = 0; i < height; i ++){
+      let toPrint = ""
+      for (let j = 0; j < i + 1; j++) {
+          toPrint += "*"
+      }
+      console.log(toPrint)
+  }
+}
+
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
   Example: 
@@ -400,6 +410,8 @@ function removeIndex(number){
    *** 
   *****
 */
+
+
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
