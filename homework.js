@@ -411,7 +411,13 @@ function halfTree(height) {
   *****
 */
 
-
+function tree(height){
+  for (let i = 0; i < height; i++){
+      let stars = "*".repeat(2 * i +1)
+      let spacesBefore = " ".repeat(height - i - 1)
+      console.log(spacesBefore + stars)
+  }
+}
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
