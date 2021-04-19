@@ -258,6 +258,19 @@ function deleteProp(obj, prop){
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
 
+function olderMovie(){
+  let result = { Year: 2100 }
+  for(let i = 0; i < movies.length; i++){
+      let movie = movies[i]
+      let currentYear = parseInt(movie.Year)
+      if (currentYear < result.Year)
+          result = movie
+  }
+
+  return result
+}
+
+
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
