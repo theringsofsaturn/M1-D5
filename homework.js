@@ -311,6 +311,15 @@ function onlyInThisMillennium(){
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
 
+function getMovieById(id) {
+  for(let i = 0; i < movies.length; i++){
+      if (movies[i].imdbID === id)
+          return movies[i]
+  }
+
+  return {}
+}
+
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
