@@ -199,23 +199,20 @@ console.log('The current day of the week is ' + weekDay);
     }
 */
 
-const rollTheDices = function (number) {
-  let values = []; 
-  for (let i = 0; i < number; i++) {
-    
-    values.push(dice(1, 6)); 
+function rollTheDices(numberOfDices){
+  let result = {
+      sum: 0,
+      values: []
   }
-  return values; 
-};
-let amountOfTimes = 3; 
-let tot = rollTheDices(amountOfTimes); 
 
-let _sum = tot.reduce(function (x, y) {
+  for (let i = 0; i < numberOfDices; i ++){
+      let diceRoll = dice()
+      result.sum += diceRoll
+      result.values.push(diceRoll)
+  }
+
+  return result
   
-  return x + y;
-});
-
-console.log(tot);
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
