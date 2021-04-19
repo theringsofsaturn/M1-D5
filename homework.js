@@ -237,27 +237,11 @@ function HowManyDays(selectedDate) {
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
-let birthday;
-
-const isTodayMyBirthday = function(){
-
-    month = date.getMonth()
-    date = date.getDate()
-   
-   
-    for (let i=0; i < birthday.length ;i++){
-   
-    if(birthday[i].day == date && birthday[i].month == month) {
-   
-    return true
-    
-    } else return false;
-   
-    }
-
+function isTodayMyBirthday() {
+  let today = new Date()
+  let bday = new Date(1986, 8, 2) // 3 sep 86
+  return (today.getDay() === bday.getDay() && today.getMonth() === bday.getMonth())
 }
-
-console.log(isTodayMyBirthday())
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
