@@ -423,6 +423,15 @@ function tree(height){
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
 
+function isItPrime(number) {
+  for (let i = 2; i < number; i ++){
+      if (number % i === 0)
+          return false
+  }
+
+  return true
+}
+
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
     {
