@@ -212,19 +212,26 @@ function rollTheDices(numberOfDices){
   }
 
   return result
-  
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
-function howManyDays(date) {
-    let present = new Date(date.getTime());
-    let past = new Date(date.getFullYear(), 0, 1);
+
+function HowManyDays(selectedDate) {
+  let today = new Date()
+  let difference = today - selectedDate
+  return difference / (1000 * 60 * 60 * 24)
+}
+
+// function howManyDays(date) {
+//     let present = new Date(date.getTime());
+//     let past = new Date(date.getFullYear(), 0, 1);
   
-    return Math.ceil((present - past + 1) / 86400000);
-  }
+//     return Math.ceil((present - past + 1) / 86400000);
+//   }
   
-  console.log(howManyDays(new Date(2021, 04, 16)) + " have passed since the beginning of the year ");
+//   console.log(howManyDays(new Date(2021, 04, 16)) + " have passed since the beginning of the year ");
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
