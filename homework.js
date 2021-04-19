@@ -161,23 +161,12 @@ function onlyLetters(str) {
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+function isThisAnEmail(email) {
+  return (email.indexOf("@") > 0 && email.indexOf(".") > 0)
 
-let email = "emiliankasemi@gmail.com";
-
-const isThisAnEmail = function(string){
-    
-    // if email adress is valid, return true
-    if (string === email){
-        
-        console.log("The email is valid")
-
-    }else if (string !== email) {
-        
-        console.log("The email is not valid")
-    }
+  // /^S+@\S+\.\S+$/.test()
 }
 
-console.log(isThisAnEmail("emiliankasemi@gmail.com"))
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
