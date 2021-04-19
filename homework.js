@@ -94,7 +94,7 @@ console.log(me);
 
 function dice() {
   return Math.floor((Math.random() * 6) + 1)
-
+}
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
@@ -158,6 +158,7 @@ function onlyLetters(str) {
   }
 
   return result
+}
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
@@ -212,7 +213,7 @@ function rollTheDices(numberOfDices){
   }
 
   return result
-
+}
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
@@ -253,7 +254,7 @@ function isTodayMyBirthday() {
 function deleteProp(obj, prop){
   delete obj[prop]
   return obj
-
+}
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
@@ -304,7 +305,7 @@ function onlyInThisMillennium(){
       if (parseInt(movie.Year) > 1999)
           result.push(movie)
   }
-
+}
   return resu
 
 /* Ex.16 
@@ -351,9 +352,34 @@ function searchByTitle(keyword) {
     and another array "unmatch" with all the remaining ones.
 */
 
+
+function searchAndDivide(word){
+  let result = {
+      match: [],
+      unmatch: []
+  }
+  for(let i = 0; i < movies.length; i++){
+      if (movies[i].Title.indexOf(keyword) !== -1)
+          result.match.push(movies[i])
+      else
+          result.unmatch.push(movies[i])
+  }
+  return result
+}   
+
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
+
+function removeIndex(number){
+  let result =[]
+  for(let i = 0; i < movies.length; i++){
+      if (number === i)
+          continue
+      
+      result.push(movies[i])
+  }
+}
 
 // [EXTRAS] JS Advanced
 
