@@ -282,6 +282,17 @@ function countMovies(){
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
 
+function onlyTheTitles(){
+  let result = []
+  for(let i = 0; i < movies.length; i++){
+      let movie = movies[i]
+      result.push(movie.Title)
+  }
+
+  return result
+}
+
+
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
