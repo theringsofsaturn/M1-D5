@@ -1,5 +1,5 @@
 
-# JavaScript Algorithm Practice 
+# JavaScript Algorithms Challenge
 
 # Module 1 / Day 5 at Strive School (EPICODE)
 # Answers in the homework.js file
